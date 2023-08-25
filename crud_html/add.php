@@ -12,13 +12,17 @@
         </div>
         <div class="form-group">
             <label>Class</label>
-            <select name="class">
+            <select name="sclass">
                 <option value="" selected disabled>Select Class</option>
-                <option value="1">BCA</option>
-                <option value="2">BSC</option>
-                <option value="3">B.TECH</option>
+         <option value="BE SOFTWARE">BE SOFTWARE</option>
+         <option value="BE COMPUTER">BE COMPUTER</option>
+         <option value="BIT">BIT</option>
+         <option value="CSIT">CSIT</option>
+         <option value="BCA ">BCA </option>
+         <option value="OTHER">OTHER</option>
             </select>
         </div>
+      
         <div class="form-group">
             <label>Phone</label>
             <input type="text" name="sphone" />

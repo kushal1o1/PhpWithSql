@@ -9,7 +9,7 @@ include 'header.php';
     {
         die('Connection Failed'.$conn->connect_error);
     }
-    $sql ="SELECT * FROM student JOIN studentclass WHERE student.sclass=studentclass.cid";
+    $sql ="SELECT * FROM student";
     $result=$conn->query($sql);
     if($result->num_rows>0)
   {
@@ -34,11 +34,12 @@ include 'header.php';
                 <td><?php echo $row["sid"] ?></td>
                 <td><?php echo $row["sname"]?></td>
                 <td><?php echo $row["saddress"]?></td>
-                <td><?phpecho $row['cname'] ?></td>
-                <td><?phpecho $row['sphone'] ?></td>
+                <td><?php echo $row["sclass"] ?></td>
+                <td><?php echo $row["sphone"] ?></td>
+             
                 <td>
-                    <a href='edit.php'>Edit</a>
-                    <a href='delete-inline.php'>Delete</a>
+                    <a href='edit.php?id=<?php echo $row["sid"]; ?>'>Edit</a>
+                    <a href='delete-inline.php?id=<?php echo $row["sid"]; ?>'>Delete</a>
                 </td>
             </tr>
             <?php } ?>
